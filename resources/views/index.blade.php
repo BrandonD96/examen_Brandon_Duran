@@ -47,7 +47,7 @@
 											<ul>
 												<li><a href="{{route('busquedaGenero.videojuegos','Action RPG')}}">Action RPG</a></li>
 												<li><a href="{{route('busquedaGenero.videojuegos','ARPG')}}">ARPG</a></li>
-												<li><a href="{{route('busquedaGenero.videojuegos','Battle Royal')}}">Battle Royal</a></li>
+												<li><a href="{{route('busquedaGenero.videojuegos','Battle Royale')}}">Battle Royal</a></li>
 												<li><a href="{{route('busquedaGenero.videojuegos','Card')}}">Card</a></li>
                                                 <li><a href="{{route('busquedaGenero.videojuegos','Card Game')}}">Card Game</a></li>
                                                 <li><a href="{{route('busquedaGenero.videojuegos','Sports')}}">Deportes</a></li>
@@ -123,28 +123,7 @@
 			<!-- Features -->
 				<div class="wrapper style1">
 
-					<section id="features" class="container special">
-						<header>
-							<h2>Si quieres ver reseñas de peliculas te puede interesar lo siguiente</h2>
-							<p>From the NY Times</p>
-						</header>
-						<div class="row">
-							
-							@foreach($item as $test)
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="{{$test['imagen']}}" alt="" /></a>
-								<header>
-									<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-							@endforeach
-							
-						</div>
-					</section>
+					
 
 				</div>
 
@@ -158,23 +137,21 @@
 								<!-- Contact -->
 									<section class="contact">
 										<header>
-											<h3>Nisl turpis nascetur interdum?</h3>
+											<h3>Universidad Politecnica de Tecamac</h3>
 										</header>
-										<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
+										<p></p>
 										<ul class="icons">
-											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-											<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+											<li><a href="https://twitter.com/UPTecamac?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="https://es-la.facebook.com/UniversidadPolitecnicadeTecamac/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											<li><a href="https://www.instagram.com/uptecamac/?hl=es" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										
 										</ul>
 									</section>
 
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+											<li>&copy; Creado por Brandon Duran</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 										</ul>
 									</div>
 

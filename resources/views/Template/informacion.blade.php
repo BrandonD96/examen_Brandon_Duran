@@ -37,7 +37,7 @@
 											<ul>
 												<li><a href="{{route('busquedaGenero.videojuegos','Action RPG')}}">Action RPG</a></li>
 												<li><a href="{{route('busquedaGenero.videojuegos','ARPG')}}">ARPG</a></li>
-												<li><a href="{{route('busquedaGenero.videojuegos','Battle Royal')}}">Battle Royal</a></li>
+												<li><a href="{{route('busquedaGenero.videojuegos','Battle Royale')}}">Battle Royal</a></li>
 												<li><a href="{{route('busquedaGenero.videojuegos','Card')}}">Card</a></li>
                                                 <li><a href="{{route('busquedaGenero.videojuegos','Card Game')}}">Card Game</a></li>
                                                 <li><a href="{{route('busquedaGenero.videojuegos','Sports')}}">Deportes</a></li>
@@ -74,7 +74,7 @@
 							<div class="col-8 col-12-mobile" id="content">
 								<article id="main">
 									<header>
-										<h2><a href="#">{{$vj->titulo}}</a></h2>
+										<h2>{{$vj->titulo}}</h2>
 										<p>
 											Fecha de estreno: {{$vj->fecha_estreno}}
 										</p>
@@ -88,117 +88,58 @@
 									Publisher: {{$vj->publisher}} <br>
 									Desarrollador: {{$vj->desarrollador}}
 									</p>
-									<a href="{{$vj->url_vj}}" class="button">Visitar Pagina Oficial</a>
+									
 								</article>
 							</div>
 							<div class="col-4 col-12-mobile" id="sidebar">
 								<hr class="first" />
 								<section>
 									<header>
-										<h3><a href="#">Accumsan sed penatibus</a></h3>
+										<h3><a href="#">Ver mas juegos de {{$vj->genero}}</a></h3>
 									</header>
 									<p>
-										Dolor sed fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-										porttitor phasellus tempus cubilia ultrices tempor sagittis  tellus ante diam nec penatibus dolor cras
-										magna tempus feugiat veroeros.
+										
 									</p>
 									<footer>
-										<a href="#" class="button">Learn More</a>
+										<a href="{{route('busquedaGenero.videojuegos',$vj->genero)}}" class="button">Ver mas</a>
 									</footer>
 								</section>
 								<hr />
 								<section>
 									<header>
-										<h3><a href="#">Sed lorem etiam consequat</a></h3>
+										<h3><a href="#">Te interesa descargar el juego?</a></h3>
 									</header>
 									<p>
-										Tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+										Puedes visitar la pagina oficial para descargar dando clic en el boton.
 									</p>
-									<div class="row gtr-50">
-										<div class="col-4">
-											<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
-										</div>
-										<div class="col-8">
-											<h4>Nibh sed cubilia</h4>
-											<p>
-												Amet nullam fringilla nibh nulla convallis tique ante proin.
-											</p>
-										</div>
-										<div class="col-4">
-											<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
-										</div>
-										<div class="col-8">
-											<h4>Proin sed adipiscing</h4>
-											<p>
-												Amet nullam fringilla nibh nulla convallis tique ante proin.
-											</p>
-										</div>
-										<div class="col-4">
-											<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
-										</div>
-										<div class="col-8">
-											<h4>Lorem feugiat magna</h4>
-											<p>
-												Amet nullam fringilla nibh nulla convallis tique ante proin.
-											</p>
-										</div>
-										<div class="col-4">
-											<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
-										</div>
-										<div class="col-8">
-											<h4>Sed tempus fringilla</h4>
-											<p>
-												Amet nullam fringilla nibh nulla convallis tique ante proin.
-											</p>
-										</div>
-										<div class="col-4">
-											<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
-										</div>
-										<div class="col-8">
-											<h4>Malesuada fermentum</h4>
-											<p>
-												Amet nullam fringilla nibh nulla convallis tique ante proin.
-											</p>
-										</div>
-									</div>
+									
 									<footer>
-										<a href="#" class="button">Magna Adipiscing</a>
+										<a href="{{$vj->url_vj}}" class="button">Visitar pagina Oficial</a>
 									</footer>
 								</section>
 							</div>
 						</div>
 						<hr />
 						<div class="row">
+						<section id="features" class="container special">
+						<header>
+							<h2>Si te interesa ver reseñas de peliculas te puede interesar lo siguiente</h2>
+							<p>From the NY Times</p>
+						</header>
+						<div class="row">
+							@foreach($movie as $test)
+							@if($loop->index >=17)
 							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="/images/pic07.jpg" alt="" /></a>
+								<a href="{{$test['url']}}" class="image featured"><img src="{{$test['imagen']}}" alt="" /></a>
 								<header>
-									<h3><a href="#">Gravida aliquam penatibus</a></h3>
+									<h3><a href="{{$test['url']}}">{{$test['titulo']}}</a></h3>
 								</header>
 								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+								{{$test['resumen']}}
 								</p>
 							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="/images/pic08.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="/images/pic09.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Magna laoreet et aliquam</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
+							@endif
+							@endforeach
 						</div>
 					</div>
 
@@ -215,25 +156,23 @@
 							<div class="col-12">
 
 								<!-- Contact -->
-									<section class="contact">
+								<section class="contact">
 										<header>
-											<h3>Nisl turpis nascetur interdum?</h3>
+											<h3>Universidad Politecnica de Tecamac</h3>
 										</header>
-										<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
+										<p></p>
 										<ul class="icons">
-											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-											<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+											<li><a href="https://twitter.com/UPTecamac?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="https://es-la.facebook.com/UniversidadPolitecnicadeTecamac/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											<li><a href="https://www.instagram.com/uptecamac/?hl=es" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										
 										</ul>
 									</section>
 
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+											<li>&copy; Creado por Brandon Duran</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 										</ul>
 									</div>
 
